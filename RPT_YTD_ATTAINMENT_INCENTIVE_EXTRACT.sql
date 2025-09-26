@@ -1,0 +1,26 @@
+CREATE COLUMN TABLE "EXT"."RPT_YTD_ATTAINMENT_INCENTIVE_EXTRACT"(
+	"Month" VARCHAR(50) NOT NULL,
+	"Qtr" VARCHAR(50) NOT NULL,
+	"ID" VARCHAR(40) NOT NULL,
+	"Plan Participant" NVARCHAR(181),
+	"DIVISION" VARCHAR(255),
+	"SITE" VARCHAR(255),
+	"DEPARTMENT" VARCHAR(255),
+	"REGION" NVARCHAR(255),
+	"Currency" NVARCHAR(255),
+	"Plan Elements" VARCHAR(255),
+	"Quota Plan" VARCHAR(255),
+	"Quota" DECIMAL(25, 10) CS_FIXED,
+	"TI LOC (Annualized)" DECIMAL(25, 10) CS_FIXED,
+	"TI USD (Annualized)" DECIMAL(18, 2) CS_FIXED,
+	"YTD Attainment$ (USD)" DECIMAL(25, 10) CS_FIXED,
+	"YTD Attainment%" DECIMAL CS_DECIMAL_FLOAT,
+	"YTD Comm Earned%" DECIMAL CS_DECIMAL_FLOAT,
+	"YTD Commission Earned (LOC)" DECIMAL(25, 10) CS_FIXED,
+	"YTD Commission Earned (USD)" DECIMAL(25, 10) CS_FIXED,
+	"Current Month Revenue Attainment" DECIMAL(25, 10) CS_FIXED,
+	"Current Month Commission Earned (LOC)" DECIMAL(25, 10) CS_FIXED,
+	"Current Month Commission Earned (USD)" DECIMAL CS_DECIMAL_FLOAT,
+	"Guarantee Payout Amount" DECIMAL(25, 10) CS_FIXED
+)
+UNLOAD PRIORITY 5 AUTO MERGE;
